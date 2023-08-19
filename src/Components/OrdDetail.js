@@ -1,19 +1,28 @@
 import React from 'react'
+import { useState } from 'react';
+
 
 const OrdDetail = (props) => {
+
+const [selectedButton, setSelectedButton] = useState();
+
+const handleButtonClick = (buttonName) => {
+    setSelectedButton(buttonName);
+  }
+
   return (
     <div class="ml-5 mr-5">
-      <div class="text-center">
+      <div class="text-center mb-3">
         <h1>Order Detail</h1>
       </div>
-      <h2>{props.packId}</h2>
+      <h2 class="mb-4" >{props.packId}</h2>
 
 
       <form>
         <h4>Car Detail</h4>
         <div class="form-row ">
           <div class="col " >
-            <input class="form-control mb-2" placeholder='Manufacturing Year' />
+            <input class="form-control mb-2 " placeholder='Manufacturing Year' />
             <input class="form-control mb-2" placeholder='Odometer Reading' />
           </div>
 
@@ -25,7 +34,7 @@ const OrdDetail = (props) => {
       </form>
 
       <form>
-        <h4>Customer details</h4>
+        <h4 class="mt-4">Customer details</h4>
         <div class="form-row ">
           <div class="col " >
             <input class="form-control mb-2" placeholder='Customer Name' />
@@ -38,12 +47,24 @@ const OrdDetail = (props) => {
           </div>
         </div>
 
-        <ul class="nav nav-pills justify-content-center">
+        <ul class="nav nav-pills justify-content-center mb-4">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Walk -In</a>
+
+            <button
+              className={`btn btn-${selectedButton === 'button1' ? 'primary' : 'outline-primary'}`}
+              onClick={() => handleButtonClick('button1')}
+            >
+              Walk In
+            </button>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pickup</a>
+          <li class="nav-item ml-3">
+        
+            <button
+              className={`btn btn-${selectedButton === 'button2' ? 'primary' : 'outline-primary'}`}
+              onClick={() => handleButtonClick('button2')}
+            >
+              Pickup
+            </button>
           </li>
         </ul>
 
@@ -51,7 +72,7 @@ const OrdDetail = (props) => {
       </form >
 
       <form>
-        <h3 >Order details</h3>
+        <h3>Order details</h3>
         <div class="form-row ">
           <div class="col " >
             <input class="form-control mb-2" placeholder='Service Name' />
@@ -78,4 +99,4 @@ const OrdDetail = (props) => {
   )
 }
 
-export default OrdDetail
+export default OrdDetail;
