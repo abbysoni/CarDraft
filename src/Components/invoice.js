@@ -18,7 +18,7 @@ const Invoice = (props) => {
 
   return (
     <div className="ml-5 mr-5">
-      <h1 className="text-center mb-4">Job Card</h1>
+      <h1 className="text-center mb-4">Invoice</h1>
       <h2 className="mb-4">{props.packId}</h2>
 
       <div className="container">

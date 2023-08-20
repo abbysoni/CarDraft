@@ -153,7 +153,7 @@ const InvDetail = (props) => {
                   {selectedFilesField1.length > 0
                     ? selectedFilesField1.map((file, index) => (
                         <div key={index} className="d-flex align-items-center file-container" >
-                          <span className="file-name" title={file.name}>{file.name.substring(0, 15)}</span>
+                          <span className="file-name" title={file.name}>{file.name.substring(0,20)}</span>
                           <button
                             className="btn btn-link ml-0"
                             type="button"
@@ -189,7 +189,7 @@ const InvDetail = (props) => {
                   {selectedFilesField2.length > 0
                     ? selectedFilesField2.map((file, index) => (
                         <div key={index} className="d-flex align-items-center file-container">
-                          <span className="file-name">{file.name.substring(0, 10)}</span>
+                          <span className="file-name">{file.name.substring(0, 20)}</span>
                           <button
                             className="btn btn-link ml-2"
                             type="button"

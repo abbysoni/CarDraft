@@ -27,7 +27,8 @@
 }
 
 .file-name {
-  /* width: 30%; Adjust width as needed */
+  /* width: 25%; */
+   /*Adjust width as needed*/
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -35,13 +36,14 @@
 .file-container {
   display: inline-flex; /* Use inline-flex to ensure elements are inline */
   align-items: center;
-  /* margin-right: 10px; */
+  /* margin-bottom: 10px; */
 }
 
 .file-display-container {
   display: flex;
   align-items: center;
-  margin-top: 10px; /* Adjust margin as needed */
+  /* margin-top: 10px;  */
+  /* Adjust margin as needed */
 }
 
 
