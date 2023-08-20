@@ -73,6 +73,14 @@ const InvDetail = (props) => {
     setSelectedFilesField2(newSelectedFiles);
   };
 
+  // slider 
+  const [sliderValue, setSliderValue] = useState('1');
+
+  const handleSliderChange = (event) => {
+    setSliderValue(event.target.value);
+  };
+
+
 
 
   return (
@@ -203,7 +211,17 @@ const InvDetail = (props) => {
             </div>
 
       <h4 class="mt-4">Fuel Meter</h4>
-      <input type="range" class="form-range" style={{ width: '80%' }} min="0" max="5" step="0.5" id="customRange3"></input>
+      <input type="range" class="form-range" style={{ width: '100%' }} min="0" max="4" step="0.5" id="customRange3"value={sliderValue}
+              onChange={handleSliderChange}
+            ></input>
+      
+            <div className="d-flex justify-content-between">
+              <span>Empty</span>
+              <span>1/4</span>
+              <span>Half</span>
+              <span>3/4</span>
+              <span>Full</span>
+            </div>
 
       <h4 class="mt-4">Other remarks</h4>
       <input class="form-control mb-2 " placeholder='Enter other details here' />
